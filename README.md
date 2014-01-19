@@ -1,8 +1,8 @@
 Flipbook For Sankoré
 ==================
 
-Crée par Adrien Bocquet sur demande de François Bocquet 
-et en attente d'encapsulage pour le logiciel Sankoré
+Crée par Adrien Bocquet ([adrienbocquet38@gmail.com](adrienbocquet38@gmail.com) sur demande de François Bocquet  
+et en attente d'encapsulage pour le logiciel [Sankoré](http://sankore.org/fr) (ajout d'un fichier de configuration et d'une favicon)
 
 Code sous license MIT:
 ----------------------
