@@ -3,7 +3,7 @@ $(function() {
 	$(window).resize(function(){ 
 
 		$('.full-height').css('height', $(window).height()); 
-		if(viewer){ viewer.refresh() };
+		if(viewer != null){ viewer.refreshWidth() ; };
 
 	}).resize();
 
@@ -232,11 +232,12 @@ $(function() {
 	/*---------------------------------------*/
 	// Vue
 
-	function PageMode(modeButton){
+	function PageMode(modeButton, container){
 
 		var that = this ;
 		this._mode = 1;
 		this._button = $(modeButton) ;
+		this.container = container ;
 
 		this.change = function(){};
 
@@ -245,30 +246,74 @@ $(function() {
 			switch(that._mode)
 			{
 				case 2: //Mode duo
-				
-					that._mode = 1 ;
-
-					$view.show.removeClass('duo');
-					$view.show.addClass('solo');
-
-					that._button.text('Une page');
-
+					that.mode(1, true);
 					break;
 
 				case 1: //Mode solo
+					that.mode(2, true);
+					break;
+			}
 
-					that._mode = 2 ;
+		});
 
-					$view.show.removeClass('solo');
-					$view.show.addClass('duo');
+		//Si persist est à false, seul la vue sera rafraichie (utile lorsqu'on est en mode 2 pages mais que l'on ne veut afficher que la première ou la dernière)
+		this.mode = function(mode, persist){
 
-					that._button.text('Deux pages');
+			switch(mode){
+				case 1:
+
+					this.container.removeClass('duo');
+					this.container.addClass('solo');
+
+					if(persist == true){ 
+						that._mode = 1 ; 
+						that._button.text('Une page');
+						that.change();
+					}
+
+					break;
+				case 2:
+
+					this.container.removeClass('solo');
+					this.container.addClass('duo');
+
+					if(persist == true){ 
+						that._mode = 2 ; 
+						that._button.text('Deux pages');
+						that.change();
+					}
 
 					break;
 			}
 
-			that.change();
-		});
+			return that._mode
+		}
+	}
+
+	function Page(url, index){
+
+		this._image = $('<img>').attr('src', url) ;
+		this._index = index ;
+		this._number = $('<p>')
+			.text(this._index + 1)
+			.addClass('page-number')
+		;
+
+		this.$ = $('<div>')
+			.addClass('page')
+			.append( this._image  )
+			.append( this._number )
+		;
+
+		this.show = function(mode)
+		{
+			this.$.addClass('current');
+		}
+
+		this.hide = function(){
+			this.$.removeClass('current');
+		}
+
 	}
 
 	function Viewer(container, images){
@@ -280,9 +325,10 @@ $(function() {
 				this.arrows.left = $(this.arrows.left);
 				this.arrows.right = $(this.arrows.right);
 
-			this.mode = new PageMode( $view.toolbar.pageMode ) ;
+			this.mode = new PageMode( $view.toolbar.pageMode, this.container ) ;
+				this.mode.mode(1, true)
 
-			this.images = [];
+			this.pages = [];
 			this.currentIndex = 0 ;
 
 		//Fonctions de l'objet
@@ -291,55 +337,67 @@ $(function() {
 				this.container.empty();
 			}
 
-			this.refresh = function(){
+			this.refreshWidth = function(){
 				this.container.css('left', ( ($(window).width() - this.container.width())/2 + 'px' ));
 				this.container.css('max-height', ( ($(window).height() - $view.toolbar.$.height() - 10) + 'px' ));
 			}
 
 		//On place les listeners
-			this.mode.change = function(){ that.refresh(); }
+			this.mode.change = function(){ 
+				that.toIndex( that.currentIndex - (that.currentIndex % this._mode ) );
+				that.refreshWidth(); 
+			}
 
 			that.arrows.left.click(function(){
 
-				that.images[ that.currentIndex ].removeClass('current');
-
 				if(that.currentIndex > 0){
-					that.mode._mode == 2 ? that.currentIndex -= 2 : that.currentIndex -= 1 ;
+
+					that.toIndex(
+						that.mode.mode() == 2 ? that.currentIndex - 2 : that.currentIndex - 1
+					);
 				}
 
-				that.images[ that.currentIndex ].addClass('current');
-				that.colorizeArrows();
 			});
 
 			that.arrows.right.click(function(){
 
-				that.images[ that.currentIndex ].removeClass('current');
-
-				if(that.currentIndex < that.images.length-1){
-					that.mode._mode == 2 ? that.currentIndex += 2 : that.currentIndex += 1 ;
+				if(that.currentIndex < that.pages.length - that.mode.mode()){
+					that.toIndex(
+						 that.mode.mode() == 2 ? that.currentIndex + 2 : that.currentIndex + 1
+					);
 				}
 
-				that.images[ that.currentIndex ].addClass('current');
-				that.colorizeArrows();
 			});
+
+			that.toIndex = function(index){
+
+				that.pages[ that.currentIndex ].hide();
+
+				that.currentIndex = index ;
+				that.pages[ that.currentIndex ].show( that.mode.mode() );
+
+				that.refreshWidth();
+				that.colorizeArrows();
+			}
 
 			this.colorizeArrows = function(){
 				that.currentIndex == 0 ? that.arrows.left.addClass('disabled') : that.arrows.left.removeClass('disabled');
-				that.currentIndex == that.images.length-1 ? that.arrows.right.addClass('disabled') : that.arrows.right.removeClass('disabled');
+				that.currentIndex == that.pages.length-1 ? that.arrows.right.addClass('disabled') : that.arrows.right.removeClass('disabled');
 			}
 
 		//Et on fait le rendu
+			var i = 0 ;
 			images.each(function(){
 
-				that.images.push( $('<img>').attr('src', $(this).children('img').attr('src')) );
+				var page = new Page($(this).children('img').attr('src'), i);
+					that.pages.push( page );
+					that.container.append( page.$ );
+
+				i++ ;
 			});
 
-			that.images.forEach(function(element){
-				that.container.append( element );
-			});
-
-			that.images[ this.currentIndex ].addClass('current');
-			this.refresh();
+			that.pages[ this.currentIndex ].show();
+			this.refreshWidth();
 			this.colorizeArrows();
 	}
 

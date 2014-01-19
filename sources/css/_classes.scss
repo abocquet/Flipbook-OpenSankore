@@ -24,10 +24,6 @@
 		margin: 0 0 20px 0 ;
 		width: 100% ;
 	}
-
-	.image {
-		width: 100% ;
-	}
 }
 
 .viewer
@@ -44,6 +40,28 @@
 
 		font-size: 300% ;
 	}
+}
+
+.page-number
+{
+	background-color: $input ;
+	color: white ;
+
+	position: relative;
+	bottom: 30px;
+	left: 5px ;
+
+	z-index: 5 ;
+
+	font-size: $small ;
+	
+	text-align: center ;
+	vertical-align: middle ;
+
+	width:  23px ;
+	height: 23px ;
+
+	overflow: hidden ;
 }
 
 /*-----------------------------------*/
@@ -84,7 +102,7 @@
 		width: auto;
 		margin: auto ;
 
-		img {
+		.page {
 			display: none ;
 		}
 
@@ -93,10 +111,22 @@
 		}
 
 		&.duo {
-			.current, .current + img 
+			.current, .current + .page
 			{
 				display: inline-block ;
 				max-width: 50%;
+			}
+
+			.current:last-child
+			{
+				max-width: 100% ;
+			}
+
+			.current + .page .page-number
+			{
+				float: right ;
+				position: relative ;
+				left: -10px ;
 			}
 		}
 	}
