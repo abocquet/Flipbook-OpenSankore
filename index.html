@@ -3,8 +3,8 @@
 	<head>
 		<meta name="viewport" content="width=device-width">
 		<meta charset="UTF-8"/>
-		<link rel="stylesheet" href="design.min.css">
 		<link rel="stylesheet" href="jquery-ui/jquery-ui-1.10.4.custom.min.css">
+		<link rel="stylesheet" href="design.min.css">
 		<title>Flipbook By Adrien</title>
 	</head>
 	<body>
@@ -12,40 +12,32 @@
 		<script src="jquery-2.0.3.js"></script>
 		<script src="jquery-ui/jquery-ui-1.10.4.custom.min.js"></script>
 
-		<section id="content" class="edit">
-			<article class="gallery full-height">
-
-				<ul>
-				</ul>
-
+		<section id="content" class="edit full-height">
+			
+			<article class="gallery">
+				<ul></ul>
 			</article>
-			<article class="viewer full-height">
-				
-				<div id="main-add">
-					<ul></ul>
+
+			<article id="show">
+				<div class="book"></div>
+			</article>
+
+			<article id="toolbar">
+				<div class="right">
+					<a href="#" class="button" id="switch-mode">Mode édition</a>
 				</div>
 
-				<div id="show">
-					<div class="book"></div>
+				<div class="right option">
+					<a class='button' href="#" id="prev-page">&larr;</a>	
+					<a class='button' href="#" id="next-page">&rarr;</a>
 				</div>
 
-				<div id="toolbar">
-						<div class="right">
-							<a href="#" class="button" id="switch-mode">Mode édition</a>
-						</div>
-
-						<div class="right option">
-							<a class='button' href="#" id="prev-page">&larr;</a>	
-							<a class='button' href="#" id="next-page">&rarr;</a>
-						</div>
-	
-						<div class="right option">
-							<a href="#" class="button" id="page-mode">Une page</a>
-						</div>
-
-					</div>
+				<div class="right option">
+					<a href="#" class="button" id="page-mode">Une page</a>
+				</div>
 
 			</article>
+
 		</section>
 
 		<script src="main.min.js"></script>

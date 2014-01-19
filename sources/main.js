@@ -86,7 +86,7 @@ $(function() {
 				)
 				.append(
 					$('<label>')
-					.text('Ajouter un fichier')
+					.text('+')
 					.addClass('add')
 					.attr('for', id)
 					.on('dragenter', function(e){ $(this).addClass('dragging'); e.stopPropagation(); e.preventDefault(); })
@@ -226,34 +226,35 @@ $(function() {
 	var allowedTypes = ['png', 'jpg', 'jpeg', 'gif'];
 
 	var adder = new Adder;
-		adder._in = $('#main-add ul') ;
-		adder._$.addClass('out-of-list');
-		adder.init();
-
-	var adder = new Adder;
 		adder._in = $view.gallery ;
 		adder.init();
+		// adder._$
+			// .addClass('full')
+			// .find('label')
+				// .text('Ajouter un fichier')
+			
 
 		/*------------------------*/
 		// Gestion du drag'n'drop
 
 		$view.gallery.sortable({
 
-			axis: 'y',
+
 			placeholder: "sortable-placeholder",
-			items: ".image",
 			forcePlaceholderSize: true,
-			tolerance: "pointer",
-			
+			items: ".image",
+			tolerance: 'pointer',
+
 			start: function(){
-				$('.adder:not(.out-of-list)').remove();
+				
 				$('.delete').hide();
+				$('.adder:not(.out-of-list)').css('visibility', 'hidden');
 			},
 
 			stop: function(){
 
+				$('.adder:not(.out-of-list)').remove();
 				var adder = new Adder;
-					console.log( $view.gallery.children().first());
 					adder._before = $view.gallery.children().first() ;
 					adder.init();
 

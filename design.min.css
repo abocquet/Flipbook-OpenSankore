@@ -127,44 +127,24 @@ a {
   text-decoration: none;
 }
 
-.gallery,
-.viewer {
-  display: inline-block;
-  vertical-align: top;
-}
-
-.viewer {
-  width: 84%;
-}
-
 .gallery {
   overflow: scroll;
-  width: 15%;
   border-right: solid 2px grey;
 }
 
 .gallery ul {
   padding: 5% 10%;
-  width: 80%;
 }
 
 .gallery li {
-  margin: 0 0 20px 0;
-  width: 100%;
+  margin: 10px;
+  display: inline-block;
+  vertical-align: middle;
+  max-width: 150px;
+  max-height: 300px;
 }
 
-.gallery .adder {
-  font-size: 0.9em;
-}
-
-.viewer .add {
-  height: 70%;
-  width: 40%;
-  margin: auto;
-  padding: 80px;
-  margin-top: 20%;
-  font-size: 300%;
-}
+/*-----------------------------------*/
 
 .page-number {
   background-color: #e67e22;
@@ -181,9 +161,11 @@ a {
   overflow: hidden;
 }
 
-/*-----------------------------------*/
-
 .add {
+  font-size: 2em;
+  font-weight: bold;
+  width: 1.5em;
+  height: 1.4em;
   padding: 5%;
   border: 2px dashed #5d5e64;
   -o-border-radius: 10px;
