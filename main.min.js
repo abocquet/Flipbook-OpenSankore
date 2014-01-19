@@ -10,6 +10,7 @@ $(function() {
 	var $view = {
 		content: $('#content'),
 		gallery: $('.gallery ul'),
+		first:   $('.first ul'),
 		viewer:  $('.viewer'),
 		show:    $('#show .book'),
 		toolbar: {
@@ -24,8 +25,12 @@ $(function() {
 		images:  []
 	}
 
+	$view.gallery.hide();
+
 	var mode = new Mode( $view.toolbar.switchMode );
 	var viewer = null ;
+
+	var allowedTypes = ['png', 'jpg', 'jpeg', 'gif'];
 
 	/*--------------------------------------*/
 	// Modification
@@ -66,6 +71,8 @@ $(function() {
 		this._previous = null ;
 		this._in = null ;
 		this._before = null ;
+
+		this.success = function(){};
 
 		this.init = function(){
 
@@ -112,7 +119,6 @@ $(function() {
 				{
 					this._$.insertBefore( this._before );
 				}
-			
 		}
 	}
 
@@ -220,19 +226,21 @@ $(function() {
 				
 				reader.readAsDataURL(files[i]);
 			}
-		}		
+		}
 	}
 
-	var allowedTypes = ['png', 'jpg', 'jpeg', 'gif'];
+	var adder = new Adder;
+		adder._in = $view.first ;
+		adder.init();
+		adder._$
+			.addClass('out-of-list')
+			.find('label')
+				.html('Ajoutez un fichier<br/><span>Vous pouvez glisser-déposer des fichiers ou bien cliquer sur les boutons entourés de pointillés pour ajouter un fichier<span>')
+		;
 
 	var adder = new Adder;
 		adder._in = $view.gallery ;
 		adder.init();
-		// adder._$
-			// .addClass('full')
-			// .find('label')
-				// .text('Ajouter un fichier')
-			
 
 		/*------------------------*/
 		// Gestion du drag'n'drop

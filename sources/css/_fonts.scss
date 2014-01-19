@@ -1,8 +1,13 @@
 @font-face {
   font-family: "OpenSans";
-  src: url('OpenSans-font/OpenSans-Regular.ttf');
+	src: url('OpenSans/OpenSans-Regular-webfont.eot');
+	src: url('OpenSans/OpenSans-Regular-webfont.eot?#iefix') format('embedded-opentype'),
+		 url('OpenSans/OpenSans-Regular-webfont.woff') format('woff'),
+		 url('OpenSans/OpenSans-Regular-webfont.ttf') format('truetype'),
+		 url('OpenSans/OpenSans-Regular-webfont.svg#open_sansregular') format('svg');
 }
 
 $large: 2em ;
 $normal: 1.2em ;
 $small: 0.9em ;
+$x-small: 0.5em ;

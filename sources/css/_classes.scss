@@ -1,7 +1,6 @@
 .gallery
 {
 	overflow: scroll ;
-	border-right: solid 2px grey ;
 
 	ul {
 		padding: 5% 10% ;
@@ -14,6 +13,11 @@
 
 		max-width: 150px ;
 		max-height: 300px ;
+	}
+
+	.add {
+		width: 1.5em ;
+		height: 1.4em ;
 	}
 
 }
@@ -46,9 +50,6 @@
 		font-size: $large ;
 		font-weight: bold ;
 
-		width: 1.5em ;
-		height: 1.4em ;
-
 		padding: 5% ;
 		border: 2px dashed $add ;
 		@include border-radius(10px);
@@ -58,13 +59,17 @@
 		&.dragging{
 			border: solid ;
 		}
+
+		span {
+			font-size: $x-small;
+		}
 	}
 
 /*-----------------------------------*/
 
 #toolbar {
 
-	position: absolute ;
+	position: fixed ;
 	bottom: 0px ;
 	right: 0px ;
 
@@ -114,6 +119,18 @@
 		}
 	}
 
+}
+
+/*-----------------------------------*/
+
+.full {
+	.adder {
+
+		display: block ;
+
+		width: 80% ;
+		margin: 5% auto  ;
+	}
 }
 
 /*-----------------------------------*/

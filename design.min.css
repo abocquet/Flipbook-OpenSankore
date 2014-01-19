@@ -97,7 +97,8 @@ video {
 
 @font-face {
   font-family: "OpenSans";
-  src: url("OpenSans-font/OpenSans-Regular.ttf");
+  src: url("OpenSans/OpenSans-Regular-webfont.eot");
+  src: url("OpenSans/OpenSans-Regular-webfont.eot?#iefix") format("embedded-opentype"), url("OpenSans/OpenSans-Regular-webfont.woff") format("woff"), url("OpenSans/OpenSans-Regular-webfont.ttf") format("truetype"), url("OpenSans/OpenSans-Regular-webfont.svg#open_sansregular") format("svg");
 }
 
 /*------------------------*/
@@ -129,7 +130,6 @@ a {
 
 .gallery {
   overflow: scroll;
-  border-right: solid 2px grey;
 }
 
 .gallery ul {
@@ -142,6 +142,11 @@ a {
   vertical-align: middle;
   max-width: 150px;
   max-height: 300px;
+}
+
+.gallery .add {
+  width: 1.5em;
+  height: 1.4em;
 }
 
 /*-----------------------------------*/
@@ -164,8 +169,6 @@ a {
 .add {
   font-size: 2em;
   font-weight: bold;
-  width: 1.5em;
-  height: 1.4em;
   padding: 5%;
   border: 2px dashed #5d5e64;
   -o-border-radius: 10px;
@@ -177,10 +180,14 @@ a {
   border: solid;
 }
 
+.add span {
+  font-size: 0.5em;
+}
+
 /*-----------------------------------*/
 
 #toolbar {
-  position: absolute;
+  position: fixed;
   bottom: 0px;
   right: 0px;
 }
@@ -219,6 +226,14 @@ a {
   float: right;
   position: relative;
   left: -10px;
+}
+
+/*-----------------------------------*/
+
+.full .adder {
+  display: block;
+  width: 80%;
+  margin: 5% auto;
 }
 
 /*-----------------------------------*/
