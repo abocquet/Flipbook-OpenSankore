@@ -4,6 +4,18 @@
 		"selected_items":
 		[
 			[
+				"insert",
+				"insertBefore"
+			],
+			[
+				"add",
+				"adder"
+			],
+			[
+				"co",
+				"color"
+			],
+			[
 				"back",
 				"background-color"
 			],
@@ -50,10 +62,6 @@
 			[
 				"swi",
 				"switch"
-			],
-			[
-				"co",
-				"colorizeArrows"
 			],
 			[
 				"remo",
@@ -146,10 +154,6 @@
 			[
 				"pre",
 				"previous"
-			],
-			[
-				"add",
-				"addClass"
 			],
 			[
 				"fun",
@@ -510,10 +514,6 @@
 			[
 				"ressou",
 				"ressource"
-			],
-			[
-				"K",
-				"KubRessourceBundle:Professeur:valider"
 			]
 		]
 	},
@@ -523,7 +523,7 @@
 	"build_system": "Packages/User/PHP-Lint.sublime-build",
 	"command_palette":
 	{
-		"height": 147.0,
+		"height": 392.0,
 		"selected_items":
 		[
 			[
@@ -907,7 +907,7 @@
 				"Set Syntax: JavaScript"
 			]
 		],
-		"width": 467.0
+		"width": 476.0
 	},
 	"console":
 	{
@@ -924,15 +924,15 @@
 	},
 	"file_history":
 	[
+		"/Users/adrienbocquet/Desktop/Flipbook/sources/main.js",
+		"/Users/adrienbocquet/Desktop/Flipbook/sources/css/_classes.scss",
 		"/Users/adrienbocquet/Desktop/Flipbook/index.html",
 		"/Users/adrienbocquet/Desktop/Flipbook/sources/css/_fonts.scss",
-		"/Users/adrienbocquet/Desktop/Flipbook/sources/css/_classes.scss",
-		"/Users/adrienbocquet/Desktop/Flipbook/sources/main.js",
+		"/Users/adrienbocquet/Desktop/Flipbook/sources/css/main.scss",
 		"/Users/adrienbocquet/Desktop/Flipbook/sources/css/_reset.scss",
 		"/Users/adrienbocquet/Desktop/Flipbook/sources/css/_mixin.scss",
 		"/Users/adrienbocquet/Downloads/Histoires/story.js",
 		"/Users/adrienbocquet/Downloads/Histoires/style.css",
-		"/Users/adrienbocquet/Desktop/Flipbook/sources/css/main.scss",
 		"/Users/adrienbocquet/Desktop/Flipbook/sources/css/_objects.scss",
 		"/Users/adrienbocquet/Desktop/Flipbook/design.min.css",
 		"/Users/adrienbocquet/Desktop/Flipbook/sources/css/_colors.scss",
@@ -1059,7 +1059,7 @@
 	},
 	"find_in_files":
 	{
-		"height": 93.0,
+		"height": 0.0,
 		"where_history":
 		[
 			"/Users/adrienbocquet/Sites/MAMP/KUB/web,*.scss",
@@ -1109,6 +1109,10 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"setGrid",
+			".y",
+			"url",
+			"gallery",
 			"79",
 			"max",
 			"px",
@@ -1232,11 +1236,7 @@
 			"'h",
 			"<",
 			"<=",
-			"'h",
-			"isAuthorValid",
-			"horaire.",
-			"horaire",
-			"<td"
+			"'h"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -1356,16 +1356,24 @@
 		"selected_items":
 		[
 			[
-				"inde",
-				"index.html"
+				"main",
+				"sources/main.js"
 			],
 			[
 				"font",
 				"sources/css/_fonts.scss"
 			],
 			[
-				"main",
-				"sources/main.js"
+				"inde",
+				"index.html"
+			],
+			[
+				"clas",
+				"sources/css/_classes.scss"
+			],
+			[
+				"ma",
+				"sources/css/main.scss"
 			],
 			[
 				"class",
@@ -1396,10 +1404,6 @@
 				"sources/css/_objects.scss"
 			],
 			[
-				"clas",
-				"sources/css/_classes.scss"
-			],
-			[
 				"fon",
 				"sources/css/_fonts.scss"
 			],
@@ -1418,10 +1422,6 @@
 			[
 				"cla",
 				"sources/css/_classes.scss"
-			],
-			[
-				"ma",
-				"sources/css/main.scss"
 			],
 			[
 				"reset",

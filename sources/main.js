@@ -203,6 +203,24 @@ $(function() {
 		});
 	}
 
+	function setGrid() //aligne toutes les images
+	{
+		$('.gallery br').remove();
+		$('.adder').each(function(){
+
+			var e = $(this);
+
+			if(e.next().length != 0)
+			{
+				if((e.offset().top + e.height() /2 ) != (e.next().offset().top + e.next().height() /2 ))
+				{
+					$('<br>').insertBefore( e );
+				}
+			}
+
+		})
+	}
+
 	function appendPhotos(element, files)
 	{
 		var element = $(element),
@@ -227,6 +245,11 @@ $(function() {
 				reader.readAsDataURL(files[i]);
 			}
 		}
+
+		$view.gallery.show();
+		$view.first.hide();
+
+		setTimeout(setGrid, 80);
 	}
 
 	var adder = new Adder;
@@ -275,6 +298,7 @@ $(function() {
 				})
 
 				$('.delete').show();
+				setGrid();
 			}
 
 		});
