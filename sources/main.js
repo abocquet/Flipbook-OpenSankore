@@ -61,9 +61,11 @@ $(function() {
 	}
 
 	function Adder(){
-		this._$ = $('<li>') ;
+		this._$ = $('<li>')
+			.addClass('adder') ;
 		this._previous = null ;
 		this._in = null ;
+		this._before = null ;
 
 		this.init = function(){
 
@@ -106,6 +108,9 @@ $(function() {
 				} else if(this._previous)
 				{
 					this._$.insertAfter( this._previous );
+				} else if(this._before)
+				{
+					this._$.insertBefore( this._before );
 				}
 			
 		}
@@ -229,6 +234,42 @@ $(function() {
 		adder._in = $view.gallery ;
 		adder.init();
 
+		/*------------------------*/
+		// Gestion du drag'n'drop
+
+		$view.gallery.sortable({
+
+			axis: 'y',
+			placeholder: "sortable-placeholder",
+			items: ".image",
+			forcePlaceholderSize: true,
+			tolerance: "pointer",
+			
+			start: function(){
+				$('.adder:not(.out-of-list)').remove();
+				$('.delete').hide();
+			},
+
+			stop: function(){
+
+				var adder = new Adder;
+					console.log( $view.gallery.children().first());
+					adder._before = $view.gallery.children().first() ;
+					adder.init();
+
+				$('.image').each(function(){
+
+					var adder = new Adder;
+						adder._previous = this ;
+						adder.init();
+
+				})
+
+				$('.delete').show();
+			}
+
+		});
+
 	/*---------------------------------------*/
 	// Vue
 
@@ -313,7 +354,6 @@ $(function() {
 		this.hide = function(){
 			this.$.removeClass('current');
 		}
-
 	}
 
 	function Viewer(container, images){
@@ -382,7 +422,7 @@ $(function() {
 
 			this.colorizeArrows = function(){
 				that.currentIndex == 0 ? that.arrows.left.addClass('disabled') : that.arrows.left.removeClass('disabled');
-				that.currentIndex == that.pages.length-1 ? that.arrows.right.addClass('disabled') : that.arrows.right.removeClass('disabled');
+				that.currentIndex == that.pages.length - that.mode.mode() ? that.arrows.right.addClass('disabled') : that.arrows.right.removeClass('disabled');
 			}
 
 		//Et on fait le rendu
