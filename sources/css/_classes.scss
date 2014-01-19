@@ -1,0 +1,189 @@
+.gallery, .viewer
+{
+	display: inline-block ;
+	vertical-align: top ;
+}
+
+.viewer
+{
+	width: 79% ;
+}
+
+.gallery
+{
+	overflow: scroll ;
+	width: 20%;
+	border-right: solid 2px grey ;
+
+	ul {
+		padding: 5% 10% ;
+		width: 80% ;
+	}
+
+	li {
+		margin: 0 0 20px 0 ;
+		width: 100% ;
+	}
+
+	.image {
+		width: 100% ;
+	}
+}
+
+.viewer
+{
+	.add
+	{
+		height: 70%;
+		width: 40%;
+
+		margin: auto ;
+
+		padding: 80px ;
+		margin-top: 20%;
+
+		font-size: 300% ;
+	}
+}
+
+/*-----------------------------------*/
+
+.add {
+	padding: 5% ;
+	border: 2px dashed $add ;
+	@include border-radius(10px);
+
+	text-align: center ;
+
+	&.dragging{
+		border: solid ;
+	}
+}
+
+/*-----------------------------------*/
+
+#toolbar {
+
+	position: absolute ;
+	bottom: 0px ;
+	right: 0px ;
+
+	> div{
+		padding: 20px ;
+	}
+
+}
+
+#show {
+
+	.book
+	{
+		position: absolute;
+		top: 10px ;
+
+		width: auto;
+		margin: auto ;
+
+		img {
+			display: none ;
+		}
+
+		.current {
+			display: block ;
+		}
+
+		&.duo {
+			.current, .current + img 
+			{
+				display: inline-block ;
+				max-width: 50%;
+			}
+		}
+	}
+
+}
+
+/*-----------------------------------*/
+
+.right {
+	float: right ;
+}
+
+.left {
+	float: left ;
+}
+
+.center {
+	text-align: center;
+	margin: auto;
+}
+
+.button
+{
+	-webkit-appearance: none;
+	border: none ;
+
+	background-color: $input ;
+	color: white ;
+
+	font-size: $normal ;
+
+	padding: 0.4em 0.7em ;
+
+	&:hover {
+		background-color: darken($input, 7%);
+	}
+
+	&.delete {
+
+		$move: -1.9em ;
+
+		background-color: transparentize($dark-grey, 0.3) ;
+		color: $light-grey ;
+
+		font-size: $small ;
+
+		position: relative;
+		top: $move ;
+
+		margin: auto ;
+		margin-bottom: $move ;
+
+		width: 100% ;
+		display: block ;
+
+		&:hover {
+			background-color: transparentize($red, 0.25);
+		}	
+	}
+
+	&.disabled {
+		background-color: transparentize($dark-grey, 0.3);
+
+		&:hover {
+			background-color: transparentize($dark-grey, 0.25);
+		}
+	}
+}
+
+/*-----------------------------------*/
+
+.view
+{
+	.gallery, #main-add, {
+		display: none ;
+	}
+
+	.viewer{	
+		width: auto ;
+	}
+
+}
+
+.edit
+{
+	.option {
+		display: none ;
+	}
+}
+
