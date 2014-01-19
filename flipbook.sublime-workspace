@@ -523,7 +523,7 @@
 	"build_system": "Packages/User/PHP-Lint.sublime-build",
 	"command_palette":
 	{
-		"height": 392.0,
+		"height": 147.0,
 		"selected_items":
 		[
 			[
@@ -907,7 +907,7 @@
 				"Set Syntax: JavaScript"
 			]
 		],
-		"width": 476.0
+		"width": 467.0
 	},
 	"console":
 	{
@@ -1109,6 +1109,7 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"arrow",
 			"setGrid",
 			".y",
 			"url",
@@ -1235,8 +1236,7 @@
 			"debut",
 			"'h",
 			"<",
-			"<=",
-			"'h"
+			"<="
 		],
 		"highlight": true,
 		"in_selection": false,

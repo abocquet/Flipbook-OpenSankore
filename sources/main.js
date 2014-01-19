@@ -4,6 +4,7 @@ $(function() {
 
 		$('.full-height').css('height', $(window).height()); 
 		if(viewer != null){ viewer.refreshWidth() ; };
+		setGrid();
 
 	}).resize();
 
@@ -440,6 +441,19 @@ $(function() {
 					);
 				}
 
+			});
+
+			$(document).keydown(function(e){
+				switch(e.keyCode) { 
+					case 37:
+						that.arrows.left.trigger('click');
+						return false;
+						break;
+					case 39:
+						that.arrows.right.trigger('click');
+						return false;
+						break;
+				}
 			});
 
 			that.toIndex = function(index){
