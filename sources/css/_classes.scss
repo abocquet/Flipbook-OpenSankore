@@ -211,6 +211,10 @@
 
 	max-width: 20px;
 	height: 20px;
+
+	position: fixed ;
+	top: 20px ;
+	right: 20px ;
 }
 
 .help {
@@ -220,7 +224,7 @@
 	position: absolute ;
 	margin: 20px 0 ;
 
-	max-width: 7% ;
+	// max-width: 8% ;
 
 	color: white ;
 	padding: 10px ;

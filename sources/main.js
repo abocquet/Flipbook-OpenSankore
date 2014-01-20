@@ -420,8 +420,16 @@ $(function() {
 			}
 
 			this.refreshWidth = function(){
-				this.container.css('left', ( ($(window).width() - this.container.width())/2 + 'px' ));
-				this.container.css('max-height', ( ($(window).height() - $view.toolbar.$.height() - 10) + 'px' ));
+
+				clearTimeout(Viewer.last);
+
+				Viewer.last = setTimeout(function(){
+
+					that.container.css('left', ( ($(window).width() - that.container.width())/2 + 'px' ));
+					that.container.css('max-height', ( ($(window).height() - $view.toolbar.$.height() - 10) + 'px' ));
+					$view.toolbar.$.css('right', ( ($(window).width() - $view.toolbar.$.width())/2 + 'px' ));
+
+				}, 10);
 			}
 
 		//On place les listeners
@@ -559,6 +567,7 @@ $(function() {
 					;
 
 					p
+						.css('width', element.width())
 						.css('top', offset.top - p.outerHeight(true))
 						.css('left', offset.left - (p.outerWidth(true) / 2) + (element.outerWidth(true) / 2) )
 						.hide()
