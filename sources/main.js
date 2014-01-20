@@ -213,7 +213,7 @@ $(function() {
 
 			if(e.next().length != 0)
 			{
-				if((e.offset().top + e.height() /2 ) != (e.next().offset().top + e.next().height() /2 ))
+				if(parseInt(e.offset().top + e.height() /2 ) != parseInt(e.next().offset().top + e.next().height() /2 ))
 				{
 					$('<br>').insertBefore( e );
 				}
