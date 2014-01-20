@@ -4,6 +4,8 @@ $(function() {
 
 		$('.full-height').css('height', $(window).height()); 
 		if(viewer != null){ viewer.refreshWidth() ; };
+		if(helper != null){ helper.refresh() ; };
+
 		setGrid();
 
 	}).resize();
@@ -18,7 +20,9 @@ $(function() {
 			$: $('#toolbar'),
 			pageMode: $.find('#page-mode'),
 			switchMode: $.find('#switch-mode'),
+			help: $.find('#help-button'),
 			arrows: {
+				$: $.find('.arrows'),
 				left: $.find("#prev-page"),
 				right: $.find("#next-page")
 			}
@@ -177,6 +181,8 @@ $(function() {
 					viewer.unset();	
 					viewer = null ;	
 
+					if(helper != null){ helper.refresh() ; };					
+
 					break;
 
 				case 'edit': //Mode edition
@@ -197,6 +203,8 @@ $(function() {
 
 						$view.toolbar.$.css('right', ( ($(window).width() - $view.toolbar.$.width())/2 + 'px' ));
 						viewer = new Viewer($view.show, $view.images);
+
+						if(helper != null){ helper.refresh() ; };
 
 						break;
 					}
@@ -443,7 +451,7 @@ $(function() {
 
 			});
 
-			$(document).keydown(function(e){
+			$(document).keyup(function(e){
 				switch(e.keyCode) { 
 					case 37:
 						that.arrows.left.trigger('click');
@@ -487,5 +495,87 @@ $(function() {
 			this.refreshWidth();
 			this.colorizeArrows();
 	}
+
+	/*---------------------------------------*/
+	// Gestion de l'aide
+
+	var helps = [
+
+		{
+			element: $view.toolbar.switchMode,
+			text: 'Appuyez sur ce bouton pour changer de mode'
+		},
+
+		{
+			element: $view.toolbar.arrows.$,
+			text: 'Vous pouvez changer de page en cliquant sur les fleches ici ou sur le clavier'
+		},
+
+		{
+			element: $view.toolbar.pageMode,
+			text: 'Ici vous pouvez passer en affichage simple ou double des pages'
+		}
+
+	];
+
+	function HelpManager(helps, button){
+
+		var that = this ;
+
+		this.helps = helps ;
+		this.helping = false ;
+		this.button = $(button) ;
+
+		this.button.click(function(){
+
+			that.helping = ! that.helping ;
+
+			if(that.helping){ that.show(); }
+			else{ that.hide(); }
+
+		});
+
+		this.refresh = function(){
+
+			if(this.helping == true){ this.hide() ; this.show(); }
+
+		}
+
+		this.show = function(){
+
+			for(var i = 0 ; i < this.helps.length ; i++)
+			{
+				var help = this.helps[i];
+				var element = $(help.element);
+
+				if(element.is(':visible'))
+				{
+					var offset = element.offset();
+
+					var p = $('<p>')
+						.addClass('help')
+						.html(help.text)
+						.appendTo( $(document.body) )
+					;
+
+					p
+						.css('top', offset.top - p.outerHeight(true))
+						.css('left', offset.left - (p.outerWidth(true) / 2) + (element.outerWidth(true) / 2) )
+						.hide()
+						.fadeIn(300)
+					;
+
+
+				}
+			}
+
+		};
+
+		this.hide = function(){
+			$('.help').fadeOut(300, function(){ $(this).remove() });
+		};
+	}
+
+	var helper = new HelpManager(helps, $view.toolbar.help);
 
 });
