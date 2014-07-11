@@ -26,14 +26,14 @@ app.controller('MainController', function($scope){
 
 app.controller('ShowController', function($scope){
 
-	$scope.next = function(){
-		if($scope.currentIndex == $scope.images.length - 1)
-		$scope.currentIndex++ ;
-	}
-
 	$scope.prev = function(){
 		if($scope.currentIndex > 0)
 		$scope.currentIndex-- ;
+	}
+
+	$scope.next = function(){
+		if($scope.currentIndex < $scope.images.length - 1)
+		$scope.currentIndex++ ;
 	}
 
 });

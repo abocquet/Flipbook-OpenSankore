@@ -29,7 +29,7 @@
 		<div ng-controller="ShowController" ng-hide="editing">
 			
 			<div class="navigation-chevron left">
-				<p class="btn btn-default btn-lg">
+				<p class="btn btn-default btn-lg" ng-click="prev()" ng-show="currentIndex > 0">
 					<span class="glyphicon glyphicon-chevron-left"></span>
 				</p>
 			</div>
@@ -43,7 +43,7 @@
 			</div>
 
 			<div class="navigation-chevron right">
-				<p class=" btn btn-default btn-lg">
+				<p class=" btn btn-default btn-lg" ng-click="next()" ng-show="currentIndex < images.length - 1">
 					<span class="glyphicon glyphicon-chevron-right"></span>
 				</p>
 			</div>
