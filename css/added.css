@@ -101,19 +101,19 @@ img.illustration {
 	-webkit-appearance: none ;
 	border: none ;
 
-	background-color: rgba(100, 100, 100, 0.6) ;
+	background-color: rgba(100, 100, 100, 0.5) ;
 	color: white ;
 
 	text-align: center;
-	font-size: 1.6em ;
+	font-size: 1.2em ;
 
 	position: relative;
 	top: -1.8em ;
 
-	margin: auto ;
-	margin-bottom: -1.8em ;
+	margin: 0 ;
+	/*margin-bottom: -3em ;*/
 
-	/*width: 100% ;*/
+	width: 100% ;
 	display: inline-block ;
 }
 
