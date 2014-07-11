@@ -4,6 +4,102 @@
 		"selected_items":
 		[
 			[
+				"curren",
+				"currentIndex"
+			],
+			[
+				"padd",
+				"padding-left"
+			],
+			[
+				"bo",
+				"border"
+			],
+			[
+				"min",
+				"min-width"
+			],
+			[
+				"max-",
+				"max-width"
+			],
+			[
+				"font",
+				"font-size"
+			],
+			[
+				"border",
+				"border-radius"
+			],
+			[
+				"item",
+				"imageItem"
+			],
+			[
+				"im",
+				"image"
+			],
+			[
+				"pos",
+				"position"
+			],
+			[
+				"margin",
+				"margin"
+			],
+			[
+				"current",
+				"currentPages"
+			],
+			[
+				"s",
+				"scope"
+			],
+			[
+				"max",
+				"max-height"
+			],
+			[
+				"set",
+				"setTimeout"
+			],
+			[
+				"help",
+				"help-button "
+			],
+			[
+				"z-",
+				"z-index"
+			],
+			[
+				"he",
+				"helper"
+			],
+			[
+				"Help",
+				"Helper"
+			],
+			[
+				"h",
+				"helping"
+			],
+			[
+				"back",
+				"background"
+			],
+			[
+				"bord",
+				"border-radius"
+			],
+			[
+				"swi",
+				"switchMode"
+			],
+			[
+				"vi",
+				"view"
+			],
+			[
 				"insert",
 				"insertBefore"
 			],
@@ -14,10 +110,6 @@
 			[
 				"co",
 				"color"
-			],
-			[
-				"back",
-				"background-color"
 			],
 			[
 				"fon",
@@ -60,10 +152,6 @@
 				"currentIndex"
 			],
 			[
-				"swi",
-				"switch"
-			],
-			[
 				"remo",
 				"removeClass"
 			],
@@ -74,10 +162,6 @@
 			[
 				"dark",
 				"dark-grey"
-			],
-			[
-				"vi",
-				"viewer"
 			],
 			[
 				"view",
@@ -128,24 +212,12 @@
 				"container"
 			],
 			[
-				"im",
-				"images"
-			],
-			[
-				"margin",
-				"margin-bottom"
-			],
-			[
 				"wid",
 				"wid	width"
 			],
 			[
 				"dra",
 				"dragging"
-			],
-			[
-				"bo",
-				"border"
 			],
 			[
 				"app",
@@ -204,20 +276,12 @@
 				"text-align"
 			],
 			[
-				"max",
-				"max-width"
-			],
-			[
 				"mar",
 				"margin"
 			],
 			[
 				"boder",
 				"border"
-			],
-			[
-				"max-",
-				"max-height"
 			],
 			[
 				"bck",
@@ -424,10 +488,6 @@
 				"request"
 			],
 			[
-				"min",
-				"min-height"
-			],
-			[
 				"Col",
 				"CollaborationBundle"
 			],
@@ -454,66 +514,6 @@
 			[
 				"do",
 				"documentheque"
-			],
-			[
-				"projet",
-				"projets"
-			],
-			[
-				"perms",
-				"permissions"
-			],
-			[
-				"getUser",
-				"getUser"
-			],
-			[
-				"usr",
-				"users"
-			],
-			[
-				"KubCol",
-				"KubCollaborationBundle:Default:index"
-			],
-			[
-				"Ressou",
-				"RessourceType"
-			],
-			[
-				"build",
-				"builder"
-			],
-			[
-				"routeA",
-				"routeAttr"
-			],
-			[
-				"ress",
-				"ressource"
-			],
-			[
-				"matier",
-				"matiere"
-			],
-			[
-				"resso",
-				"ressources"
-			],
-			[
-				"temp",
-				"tempFilename"
-			],
-			[
-				"get_ca",
-				"get_class"
-			],
-			[
-				"error",
-				"errorList"
-			],
-			[
-				"ressou",
-				"ressource"
 			]
 		]
 	},
@@ -523,7 +523,7 @@
 	"build_system": "Packages/User/PHP-Lint.sublime-build",
 	"command_palette":
 	{
-		"height": 147.0,
+		"height": 392.0,
 		"selected_items":
 		[
 			[
@@ -531,7 +531,27 @@
 				"Indentation: Convert to Tabs"
 			],
 			[
-				"re",
+				"syhtml",
+				"Set Syntax: HTML"
+			],
+			[
+				"html",
+				"Snippet: html"
+			],
+			[
+				"han",
+				"Set Syntax: Handlebars"
+			],
+			[
+				"hand",
+				"Snippet: handlebars template"
+			],
+			[
+				"dele",
+				"File: Delete"
+			],
+			[
+				"renam",
 				"File: Rename"
 			],
 			[
@@ -539,12 +559,28 @@
 				"File: Rename"
 			],
 			[
-				"inden",
-				"Indentation: Reindent Lines"
+				"ember",
+				"Simple Ember.js Navigator: List templates"
 			],
 			[
-				"dele",
-				"File: Delete"
+				"angula",
+				"Set Syntax: HTML (Angular.js)"
+			],
+			[
+				"edit",
+				"Project: Edit"
+			],
+			[
+				"move",
+				"File: Move"
+			],
+			[
+				"re",
+				"File: Rename"
+			],
+			[
+				"inden",
+				"Indentation: Reindent Lines"
 			],
 			[
 				"de",
@@ -579,10 +615,6 @@
 				"View: Toggle Side Bar"
 			],
 			[
-				"move",
-				"File: Move"
-			],
-			[
 				"dupl",
 				"File: Duplicate"
 			],
@@ -593,10 +625,6 @@
 			[
 				"duple",
 				"File: Duplicate"
-			],
-			[
-				"html",
-				"Snippet: html"
 			],
 			[
 				"lower",
@@ -637,10 +665,6 @@
 			[
 				"sideb",
 				"View: Toggle Side Bar"
-			],
-			[
-				"renam",
-				"File: Rename"
 			],
 			[
 				"delet",
@@ -855,10 +879,6 @@
 				"View: Toggle Side Bar"
 			],
 			[
-				"edit",
-				"Project: Edit"
-			],
-			[
 				"contro",
 				"Package Control: Remove Package"
 			],
@@ -907,7 +927,7 @@
 				"Set Syntax: JavaScript"
 			]
 		],
-		"width": 467.0
+		"width": 575.0
 	},
 	"console":
 	{
@@ -924,9 +944,30 @@
 	},
 	"file_history":
 	[
-		"/Users/adrienbocquet/Desktop/Flipbook/sources/main.js",
+		"/Applications/Open-Sankore.app/Contents/Resources/library/applications/Flipbook.wgt/css/added.css",
+		"/Applications/Open-Sankore.app/Contents/Resources/library/applications/Flipbook.wgt/index.html",
+		"/Applications/Open-Sankore.app/Contents/Resources/library/applications/Flipbook.wgt/js/app.js",
+		"/Applications/Open-Sankore.app/Contents/Resources/library/applications/Flipbook.wgt/flipbook.sublime-project",
+		"/Applications/Open-Sankore.app/Contents/Resources/library/applications/Flipbook.wgt/image-item.js",
+		"/Applications/Open-Sankore.app/Contents/Resources/library/applications/Flipbook.wgt/image-item.html",
+		"/Applications/Open-Sankore.app/Contents/Resources/library/applications/Flipbook.wgt/css/bootstrap.css",
+		"/Applications/Open-Sankore.app/Contents/Resources/library/applications/Flipbook.wgt/js/flipbook.js",
+		"/Applications/Open-Sankore.app/Contents/Resources/library/applications/Flipbook.wgt/js/handlebars-helpers.js",
+		"/Users/adrienbocquet/Downloads/starter-kit-1.5.1/README.md",
+		"/Applications/Open-Sankore.app/Contents/Resources/library/applications/Flipbook.wgt/js/handlebar-helpers.js",
+		"/Applications/Open-Sankore.app/Contents/Resources/library/applications/Flipbook.wgt/style.css",
+		"/Applications/Open-Sankore.app/Contents/Resources/library/applications/Flipbook.wgt/views/index.js",
+		"/Applications/Open-Sankore.app/Contents/Resources/library/applications/Flipbook.wgt/views/index.hbs",
+		"/Applications/Open-Sankore.app/Contents/Resources/library/applications/Flipbook.wgt/views/main.hbs",
+		"/Users/adrienbocquet/Downloads/PictoNotes/js/Picto Note.js",
+		"/Applications/Open-Sankore.app/Contents/Resources/library/applications/Flipbook.wgt/flipbook.js",
+		"/Applications/Open-Sankore.app/Contents/Resources/library/applications/Flipbook.wgt/js/angular.js",
+		"/Applications/Open-Sankore.app/Contents/Resources/library/applications/Flipbook.wgt/config.xml",
+		"/Users/adrienbocquet/Desktop/Flipbook/sources/css/_colors.scss",
 		"/Users/adrienbocquet/Desktop/Flipbook/sources/css/_classes.scss",
 		"/Users/adrienbocquet/Desktop/Flipbook/index.html",
+		"/Users/adrienbocquet/Desktop/Flipbook/sources/main.js",
+		"/Users/adrienbocquet/Sites/MAMP/KUB/web/ressources/sass/partials/_typo.scss",
 		"/Users/adrienbocquet/Desktop/Flipbook/sources/css/_fonts.scss",
 		"/Users/adrienbocquet/Desktop/Flipbook/sources/css/main.scss",
 		"/Users/adrienbocquet/Desktop/Flipbook/sources/css/_reset.scss",
@@ -935,7 +976,6 @@
 		"/Users/adrienbocquet/Downloads/Histoires/style.css",
 		"/Users/adrienbocquet/Desktop/Flipbook/sources/css/_objects.scss",
 		"/Users/adrienbocquet/Desktop/Flipbook/design.min.css",
-		"/Users/adrienbocquet/Desktop/Flipbook/sources/css/_colors.scss",
 		"/Users/adrienbocquet/Desktop/Flipbook/sources/css/_object.scss",
 		"/Users/adrienbocquet/Desktop/Flipbook/sources/css/reset.css",
 		"/Users/adrienbocquet/Desktop/Flipbook/style.css",
@@ -1031,27 +1071,7 @@
 		"/Users/adrienbocquet/Sites/MAMP/Kub/src/Kub/CollaborationBundle/Form/Handler/ProjetHandler.php",
 		"/Users/adrienbocquet/Sites/MAMP/Kub/src/Kub/CollaborationBundle/Form/FichierType.php",
 		"/Users/adrienbocquet/Sites/Sankoré/Calendrier/main.js",
-		"/Users/adrienbocquet/Sites/MAMP/Kub/web/ressources/js/ariane.js",
-		"/Users/adrienbocquet/Sites/MAMP/Kub/src/Kub/CollaborationBundle/Form/Type/RessourceType.php",
-		"/Users/adrienbocquet/Sites/MAMP/Kub/src/Kub/HomeBundle/Form/Type/FileType.php",
-		"/Users/adrienbocquet/Sites/MAMP/Kub/src/Kub/HomeBundle/Entity/Ressource.php",
-		"/Users/adrienbocquet/Sites/MAMP/Kub/src/Kub/HomeBundle/Form/Type/RessourceType.php",
-		"/Users/adrienbocquet/Sites/MAMP/Kub/src/Kub/HomeBundle/Form/Handler/RessourceHandler.php",
-		"/Users/adrienbocquet/Sites/MAMP/Kub/src/Kub/CollaborationBundle/Form/Handler/RessourceHandler.php",
-		"/Users/adrienbocquet/Sites/MAMP/Kub/src/Kub/RessourceBundle/Form/Handler/RessourceHandler.php",
-		"/Users/adrienbocquet/Sites/MAMP/Kub/src/Kub/RessourceBundle/Entity/Ressource.php",
-		"/Users/adrienbocquet/Sites/MAMP/Kub/src/Kub/CollaborationBundle/Resources/views/Projet/create.html.twig",
-		"/Users/adrienbocquet/Sites/MAMP/Kub/src/Kub/CollaborationBundle/DataFixtures/ORM/LoadProjetData.php",
-		"/Users/adrienbocquet/Sites/MAMP/Kub/src/Kub/ArianeBundle/DataFixtures/ORM/LoadCommentaireData.php",
-		"/Users/adrienbocquet/Sites/MAMP/Kub/src/Kub/RessourceBundle/Entity/File.php",
-		"/Users/adrienbocquet/Sites/MAMP/Kub/src/Kub/CollaborationBundle/Entity/File.php",
-		"/Users/adrienbocquet/Sites/MAMP/Kub/src/Kub/RessourceBundle/Controller/DefaultController.php",
-		"/Users/adrienbocquet/Sites/MAMP/Kub/src/Kub/CollaborationBundle/Resources/views/Ressource/create.html.twig",
-		"/Users/adrienbocquet/Sites/MAMP/Kub/src/Kub/CollaborationBundle/Resources/views/Ressource/form.html.twig",
-		"/Users/adrienbocquet/Sites/MAMP/Kub/src/Kub/CollaborationBundle/Resources/views/Projet/form.html.twig",
-		"/Users/adrienbocquet/Sites/MAMP/Kub/src/Kub/CollaborationBundle/Controller/DocumenthequeController.php",
-		"/Users/adrienbocquet/Sites/MAMP/KUB/src/Kub/CollaborationBundle/Resources/config/routing/documentheque/ressource.yml",
-		"/Users/adrienbocquet/Sites/MAMP/Kub/src/Kub/CollaborationBundle/Form/RessourceType.php"
+		"/Users/adrienbocquet/Sites/MAMP/Kub/web/ressources/js/ariane.js"
 	],
 	"find":
 	{
@@ -1062,6 +1082,8 @@
 		"height": 0.0,
 		"where_history":
 		[
+			"/Users/adrienbocquet/Desktop/Flipbook/sources",
+			"/Users/adrienbocquet/Desktop/Flipbook",
 			"/Users/adrienbocquet/Sites/MAMP/KUB/web,*.scss",
 			"/Users/adrienbocquet/Sites/MAMP/KUB/web",
 			"/Users/adrienbocquet/Sites/MAMP/KUB",
@@ -1109,6 +1131,44 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"index",
+			"toggleMode",
+			"preview",
+			"edit",
+			"warning",
+			"a",
+			"button",
+			"primary",
+			"auto",
+			"p",
+			"selectedIndex",
+			"scope",
+			"changeEvent",
+			"scope",
+			"ddd",
+			"imageGallery",
+			"top",
+			"group",
+			"pull",
+			"left",
+			"pull",
+			"img",
+			"png",
+			"registerHelper",
+			"span",
+			"pageMode",
+			"ImagesController",
+			"png",
+			"this",
+			"last",
+			"toolbar",
+			"refreshWidth",
+			"html",
+			"import",
+			"border",
+			"this",
+			"2em",
+			"help-button",
 			"arrow",
 			"setGrid",
 			".y",
@@ -1198,45 +1258,7 @@
 			"center",
 			" :",
 			"\n@",
-			"add",
-			"<li class=\"add\">Ajouter une image</li>",
-			"ajouter",
-			"=\"ajouter",
-			"ajouter",
-			"Ajouter",
-			"ajouter",
-			"picture",
-			"_reset",
-			".",
-			"png",
-			": ",
-			"viewer",
-			"div",
-			"  ",
-			"->",
-			"tag",
-			"Tag",
-			"tag",
-			"Tag",
-			"tag",
-			"task",
-			"Task",
-			"task",
-			"Tags",
-			"originalTags",
-			"enseignement",
-			"this",
-			"$this->form->getData()",
-			" * 2",
-			"{{ interval.rowSpan",
-			"())",
-			"$this->horaires_search",
-			"array_search",
-			", $this->horaires)",
-			"debut",
-			"'h",
-			"<",
-			"<="
+			"add"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -1356,16 +1378,92 @@
 		"selected_items":
 		[
 			[
+				"cs",
+				"css/added.css"
+			],
+			[
+				"app",
+				"js/app.js"
+			],
+			[
+				"css",
+				"css/added.css"
+			],
+			[
+				"in",
+				"index.html"
+			],
+			[
+				"inde",
+				"index.html"
+			],
+			[
+				"add",
+				"css/added.css"
+			],
+			[
+				"ima",
+				"image-item.js"
+			],
+			[
+				"boot",
+				"css/bootstrap.css"
+			],
+			[
+				"added",
+				"css/added.css"
+			],
+			[
+				"boo",
+				"css/bootstrap.css"
+			],
+			[
+				"fli",
+				"js/flipbook.js"
+			],
+			[
+				"index",
+				"index.html"
+			],
+			[
+				"help",
+				"js/handlebars-helpers.js"
+			],
+			[
+				"a",
+				"css/added.css"
+			],
+			[
+				"js",
+				"js/flipbook.js"
+			],
+			[
+				"angu",
+				"js/angular.js"
+			],
+			[
+				"xml",
+				"config.xml"
+			],
+			[
+				"colo",
+				"sources/css/_colors.scss"
+			],
+			[
+				"color",
+				"sources/css/_colors.scss"
+			],
+			[
+				"cla",
+				"sources/css/_classes.scss"
+			],
+			[
 				"main",
 				"sources/main.js"
 			],
 			[
 				"font",
 				"sources/css/_fonts.scss"
-			],
-			[
-				"inde",
-				"index.html"
 			],
 			[
 				"clas",
@@ -1392,10 +1490,6 @@
 				"sources/css/_classes.scss"
 			],
 			[
-				"css",
-				"design.min.css"
-			],
-			[
 				"re",
 				"sources/css/_reset.scss"
 			],
@@ -1414,14 +1508,6 @@
 			[
 				"col",
 				"sources/css/_colors.scss"
-			],
-			[
-				"in",
-				"index.html"
-			],
-			[
-				"cla",
-				"sources/css/_classes.scss"
 			],
 			[
 				"reset",
@@ -1504,10 +1590,6 @@
 				"src/Kub/EDTBundle/Entity/Categorie.php"
 			],
 			[
-				"colo",
-				"web/ressources/sass/partials/_colors.scss"
-			],
-			[
 				"loadcategorie",
 				"src/Kub/EDTBundle/DataFixtures/ORM/LoadCategorieData.php"
 			],
@@ -1538,10 +1620,6 @@
 			[
 				"tache",
 				"src/Kub/CollaborationBundle/Entity/Tache.php"
-			],
-			[
-				"color",
-				"web/ressources/sass/partials/_colors.scss"
 			],
 			[
 				"liste",
@@ -1810,62 +1888,6 @@
 			[
 				"collaboracontroler",
 				"src/Kub/CollaborationBundle/Controller/ProjetController.php"
-			],
-			[
-				"collaborationcontr",
-				"src/Kub/CollaborationBundle/Controller/OrganisationController.php"
-			],
-			[
-				"fichieryml",
-				"src/Kub/CollaborationBundle/Resources/config/routing/documentheque/fichier.yml"
-			],
-			[
-				"docuem",
-				"src/Kub/CollaborationBundle/Resources/config/routing/documentheque.yml"
-			],
-			[
-				"collaborationreoutin",
-				"src/Kub/CollaborationBundle/Resources/config/routing.yml"
-			],
-			[
-				"collaroutin",
-				"src/Kub/CollaborationBundle/Resources/config/routing.yml"
-			],
-			[
-				"menubi",
-				"src/Kub/UserBundle/Menu/MenuBuilder.php"
-			],
-			[
-				"collabofiche",
-				"src/Kub/CollaborationBundle/Entity/Fichier.php"
-			],
-			[
-				"collaborationress",
-				"src/Kub/CollaborationBundle/Entity/Ressource.php"
-			],
-			[
-				"kerne",
-				"app/AppKernel.php"
-			],
-			[
-				"routindev",
-				"app/config/routing_dev.yml"
-			],
-			[
-				"routing",
-				"app/config/routing.yml"
-			],
-			[
-				"composer",
-				"composer.json"
-			],
-			[
-				"fichiercontroller",
-				"src/Kub/CollaborationBundle/Controller/FichierController.php"
-			],
-			[
-				"collaborshow",
-				"src/Kub/CollaborationBundle/Resources/views/Documentheque/show.html.twig"
 			]
 		],
 		"width": 0.0

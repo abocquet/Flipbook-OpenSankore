@@ -1,53 +1,80 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="Flipbook">
 	<head>
-		<meta name="viewport" content="width=device-width">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<meta charset="UTF-8"/>
-		<link rel="stylesheet" href="jquery-ui/jquery-ui-1.10.4.custom.min.css">
-		<link rel="stylesheet" href="design.min.css">
-		<title>Flipbook By Adrien</title>
-	</head>
-	<body>
-	
-		<script src="jquery-2.0.3.js"></script>
-		<script src="jquery-ui/jquery-ui-1.10.4.custom.min.js"></script>
+		<title>Flipbook by Adrien</title>
 
-		<section id="content" class="edit full-height">
+		<link href="css/bootstrap.min.css" rel="stylesheet">
+		<link href="css/jquery-ui.min.css" rel="stylesheet">
+		<link href="css/added.css" rel="stylesheet">
+	</head>
+	<body ng-controller="MainController" class="container-fluid">	
+
+		<div class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog" aria-hidden="true" id="help">
+			<div class="modal-dialog modal-sm">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+						<h4 class="modal-title" id="myModalLabel">Modal title</h4>
+					</div>
+					<div class="modal-body">
+						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni optio ut laborum est quaerat commodi at sapiente, facilis nulla suscipit cupiditate maxime quos accusamus vero iste doloremque ipsa rerum quidem!	
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div ng-controller="ShowController" ng-hide="editing">
 			
-			<div class="first full">
-				<ul></ul>
+			<div class="navigation-chevron left">
+				<p class="glyphicon glyphicon-chevron-left"></p>
 			</div>
 
-			<article class="gallery">
-				<ul></ul>
-			</article>
+			<div ng-repeat="i in currentPages()" class="col-xs-12 no-padding">
+				<img 
+					ng-src="{{ images[i] }}" 
+					alt="Image {{ i }}" 
+					class="illustration pull-center"
+				/>
+			</div>
 
-			<article id="show">
-				<div class="book"></div>
-			</article>
+			<div class="navigation-chevron right">
+				<p class="glyphicon glyphicon-chevron-right"></p>
+			</div>
 
-			<article id="toolbar">
+		</div>
 
-				<div class="right"><a href="#" class="button" id="help-button">?</a></div>
+		<div ng-controller="EditController" ng-show="editing" class="edit-layout">
+			
+			<div class="preview"> 
+				<img ng-src="{{ images[currentIndex] }}" alt="Image {{ currentIndex }}" class="illustration pull-center">
 
-				<div class="right">
-					<a href="#" class="button" id="switch-mode">Mode édition</a>
+				<div class="footer">
+						<a href="#" class="btn btn-primary"><span class="glyphicon glyphicon-eye-open" ng-click="toggleMode()"></span></a>
+						<a href="#" class="btn btn-primary"><span class="glyphicon glyphicon-question-sign" ng-click="displayHelp()"></span></a>
 				</div>
+			</div>
 
-				<div class="right option arrows">
-					<a class='button' href="#" id="prev-page">&larr;</a>	
-					<a class='button' href="#" id="next-page">&rarr;</a>
-				</div>
+			<ul class="gallery list-group" ui-sortable>
+				<li ng-repeat="image in images track by $index">
+					<img ng-src="{{ image }}" class="img-responsive" ng-click="selectImage($index)">
+					<button class="delete-image">
+						<span class="glyphicon glyphicon-trash" ng-click="deleteImage($index)"></span>
+					</button>
+				</li>
+			</ul>
 
-				<div class="right option">
-					<a href="#" class="button" id="page-mode">Une page</a>
-				</div>
+		</div>
 
-			</article>
-
-		</section>
-
-		<script src="main.min.js"></script>
 	
+		<script src="js/libs/jquery.min.js"></script>
+		<script src="js/libs/jquery-ui.min.js"></script>
+		<script src="js/libs/bootstrap.min.js"></script>
+		<script src="js/libs/angular.min.js"></script>
+		<script src="js/libs/sortable.js"></script>
+		<script src="js/app.js"></script>
+
 	</body>
 </html>
