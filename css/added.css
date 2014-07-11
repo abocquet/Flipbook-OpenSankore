@@ -43,7 +43,8 @@ img.illustration {
 	margin: 0;
 	padding: 10px;
 
-	overflow: scroll;
+	overflow-y: scroll;
+	overflow-x: hidden;
 
 	border-left: 1px solid #ddd;
 }
