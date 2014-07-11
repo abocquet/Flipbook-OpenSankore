@@ -69,12 +69,15 @@ img.illustration {
 }
 
 .navigation-chevron {
-	font-size: 3em ;
 
 	position: absolute;
-	top: 45%;
+	bottom: 40%;
 
 	z-index: 2 ;
+}
+
+.navigation-chevron span {
+	font-size: 1em ;
 }
 
 .navigation-chevron.left {
