@@ -9,7 +9,7 @@ var app = angular.module('Flipbook', ['ui.sortable']);
 app.controller('MainController', function($scope){
 
 	$scope.currentIndex = 0 ;
-	$scope.editing = false ;
+	$scope.editing = true ;
 
 	$scope.images = [
 		"images/1.jpg",
