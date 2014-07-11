@@ -4,7 +4,7 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<meta charset="UTF-8"/>
-		<title>Flipbook by Adrien</title>
+		<title>Flipbook</title>
 
 		<link href="css/bootstrap.min.css" rel="stylesheet">
 		<link href="css/jquery-ui.min.css" rel="stylesheet">
@@ -32,9 +32,9 @@
 				<p class="glyphicon glyphicon-chevron-left"></p>
 			</div>
 
-			<div ng-repeat="i in currentPages()" class="col-xs-12 no-padding">
+			<div class="col-xs-12 no-padding">
 				<img 
-					ng-src="{{ images[i] }}" 
+					ng-src="{{ images[currentIndex] }}" 
 					alt="Image {{ i }}" 
 					class="illustration pull-center"
 				/>
@@ -57,7 +57,7 @@
 				</div>
 			</div>
 
-			<ul class="gallery list-group" ui-sortable>
+			<ul class="gallery list-group" ui-sortable="sortableOptions" ng-model="images">
 				<li ng-repeat="image in images track by $index">
 					<img ng-src="{{ image }}" class="img-responsive" ng-click="selectImage($index)">
 					<button class="delete-image">
@@ -72,7 +72,8 @@
 		<script src="js/libs/jquery.min.js"></script>
 		<script src="js/libs/jquery-ui.min.js"></script>
 		<script src="js/libs/bootstrap.min.js"></script>
-		<script src="js/libs/angular.min.js"></script>
+		<!-- // <script src="js/libs/angular.min.js"></script> -->
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.19/angular.min.js"></script>
 		<script src="js/libs/sortable.js"></script>
 		<script src="js/app.js"></script>
 

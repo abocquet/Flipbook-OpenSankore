@@ -30,17 +30,6 @@ app.controller('MainController', function($scope){
 
 app.controller('ShowController', function($scope){
 
-	$scope.currentPages = function(){
-
-		var pages = [ this.currentIndex ] ;
-		if(this.mode == 2 && this.currentIndex < this.images.length){
-			pages.push(this.currentIndex + 1);
-		}
-
-		return pages ;
-
-	};
-
 	$scope.next = function(){
 		if($scope.currentIndex == $scope.images.length - 1)
 		$scope.currentIndex++ ;
@@ -61,12 +50,26 @@ app.controller('EditController', function($scope){
 
 	$scope.deleteImage = function(index){
 
-		if(index == (this.images.length - 1) || index <= this.currentIndex){
-			$scope.currentIndex-- ;
+		$scope.currentIndex-- 
+		if($scope.currentIndex < 0){
+			$scope.currentIndex = 0 ;
 		}
 
-		this.images.splice(index, 1);
+		$scope.images.splice(index, 1);
 	}
+
+	$scope.sortableOptions = {
+		axis: 'y',
+		start: function(){
+			$scope.sortableOptions.savedState = $scope.images.slice(0) ;
+		},
+		stop: function(e, ui){
+
+			$scope.currentIndex = $scope.images.indexOf($scope.sortableOptions.savedState[$scope.currentIndex]);
+			$scope.sortableOptions.savedState = "";
+
+		}
+	};
 
 });
 

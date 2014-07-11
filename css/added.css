@@ -4,6 +4,10 @@
 	-webkit-user-select: none ;
 }
 
+li {
+	list-style-type: none;
+}
+
 .container-fluid {
 	padding: 0 ;
 }
