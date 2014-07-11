@@ -4,8 +4,8 @@
 		xmlns:ub="http://uniboard.mnemis.com/widgets"
         id="http://www.example.net/widgets/helloworld" 
         version="1.0"
-        width="350"
-        height="147" 
+        width="1024"
+        height="768" 
 		ub:resizable="true">
 		
 		<name>Flipbook</name>

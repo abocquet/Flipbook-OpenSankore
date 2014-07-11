@@ -21,10 +21,6 @@ app.controller('MainController', function($scope){
 		$scope.editing = !$scope.editing ;
 	}
 
-	$scope.displayHelp = function(){
-		$('#help').modal({});
-	}
-
 });
 
 
