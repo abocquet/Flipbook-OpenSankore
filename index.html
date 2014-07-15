@@ -17,14 +17,18 @@
 				<div class="modal-content">
 					<div class="modal-header">
 						<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-						<h4 class="modal-title">Modal title</h4>
+						<h4 class="modal-title">Aide</h4>
 					</div>
-					<div class="modal-body">
+					<p class="modal-body">
 						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni optio ut laborum est quaerat commodi at sapiente, facilis nulla suscipit cupiditate maxime quos accusamus vero iste doloremque ipsa rerum quidem!
 
 						<br><br>
-						Flipbook utilise le <a href="http://www.getboostrap.com">Bootstrap Twitter</a> ainsi que la librairie <a href="http://glyphicons.com">Glyphicons</a>
-					</div>
+						Flipbook utilise 
+							le <a href="http://www.getboostrap.com">Bootstrap Twitter</a>, 
+							la librairie <a href="http://glyphicons.com">Glyphicons</a>,
+							ainsi que les frameworks javascript <a href="https://angularjs.org">Angular</a> 
+							et <a href="http://jquery.com">JQuery</a>
+					</p>
 				</div>
 			</div>
 		</div>
@@ -68,7 +72,7 @@
 				</div>
 			</div>
 
-			<ul class="gallery list-group" ui-sortable="sortableOptions" ng-model="images">
+			<ul class="gallery list-group" ui-sortable="sortableOptions" ng-model="images" drop-image>
 				<li ng-repeat="image in images track by $index">
 					<img ng-src="{{ image }}" class="img-responsive" ng-click="selectImage($index)">
 					<button class="delete-image" ng-click="deleteImage($index)">

@@ -4,9 +4,12 @@ Array.prototype.insert = function (index, item) {
   this.splice(index, 0, item);
 };
 
+
 var app = angular.module('Flipbook', ['ui.sortable']);
 
 app.controller('MainController', function($scope){
+
+	sankore.enableDropOnWidget();
 
 	$scope.currentIndex = 0 ;
 	$scope.editing = true ;
@@ -69,23 +72,14 @@ app.controller('EditController', function($scope){
 
 });
 
-app.directive("fileread", [function () {
+app.directive("dropImage", function (){
 	return {
-		link: function ($scope, element, attributes) {
+		restrict: 'A',
+		link: function ($scope, elem, attributes) {
 
-			element.bind("change", function (changeEvent) {
-
-				var reader = new FileReader();
-				reader.onload = function (loadEvent) {
-					$scope.$apply(function(){
-						$scope.images.push(loadEvent.target.result);
-					});
-				}
-
-				reader.readAsDataURL(changeEvent.target.files[0]);
-
+			elem.bind("drop", function(e) {
+				alert(e);
 			});
-
 		}
 	}
-}]);
+});

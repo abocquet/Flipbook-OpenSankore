@@ -4,6 +4,14 @@
 		"selected_items":
 		[
 			[
+				"co",
+				"console_content"
+			],
+			[
+				"data",
+				"dataTransfer"
+			],
+			[
 				"new",
 				"newState"
 			],
@@ -126,10 +134,6 @@
 			[
 				"add",
 				"adder"
-			],
-			[
-				"co",
-				"color"
 			],
 			[
 				"fon",
@@ -372,10 +376,6 @@
 				"inline-block"
 			],
 			[
-				"data",
-				"data-value"
-			],
-			[
 				"liste",
 				"listeTaches"
 			],
@@ -523,9 +523,13 @@
 	"build_system": "Packages/User/PHP-Lint.sublime-build",
 	"command_palette":
 	{
-		"height": 47.0,
+		"height": 227.0,
 		"selected_items":
 		[
+			[
+				"packe",
+				"Package Control: Install Package"
+			],
 			[
 				"tabs",
 				"Indentation: Convert to Tabs"
@@ -859,10 +863,6 @@
 				"File: Open In Browser - Testing Server"
 			],
 			[
-				"packe",
-				"Package Control: Remove Package"
-			],
-			[
 				"gis",
 				"Gist: Update File"
 			],
@@ -927,7 +927,7 @@
 				"Set Syntax: JavaScript"
 			]
 		],
-		"width": 575.0
+		"width": 494.0
 	},
 	"console":
 	{
@@ -945,8 +945,12 @@
 	"file_history":
 	[
 		"/Applications/Open-Sankore.app/Contents/Resources/library/applications/Flipbook.wgt/index.html",
-		"/Applications/Open-Sankore.app/Contents/Resources/library/applications/Flipbook.wgt/css/added.css",
 		"/Applications/Open-Sankore.app/Contents/Resources/library/applications/Flipbook.wgt/js/app.js",
+		"/Users/adrienbocquet/Downloads/PictoNotes/Picto Note.html",
+		"/Users/adrienbocquet/Downloads/PictoNotes/js/Picture.js",
+		"/Users/adrienbocquet/Downloads/PictoNotes/js/Picto Note.js",
+		"/Applications/Open-Sankore.app/Contents/Resources/library/applications/Calendrier.wgt/main.js",
+		"/Applications/Open-Sankore.app/Contents/Resources/library/applications/Flipbook.wgt/css/added.css",
 		"/Users/adrienbocquet/Downloads/jr-master/about.html",
 		"/Applications/Open-Sankore.app/Contents/Resources/library/applications/Flipbook.wgt/config.xml",
 		"/Applications/Open-Sankore.app/Contents/Resources/library/applications/Flipbook.wgt/flipbook.sublime-project",
@@ -961,7 +965,6 @@
 		"/Applications/Open-Sankore.app/Contents/Resources/library/applications/Flipbook.wgt/views/index.js",
 		"/Applications/Open-Sankore.app/Contents/Resources/library/applications/Flipbook.wgt/views/index.hbs",
 		"/Applications/Open-Sankore.app/Contents/Resources/library/applications/Flipbook.wgt/views/main.hbs",
-		"/Users/adrienbocquet/Downloads/PictoNotes/js/Picto Note.js",
 		"/Applications/Open-Sankore.app/Contents/Resources/library/applications/Flipbook.wgt/flipbook.js",
 		"/Applications/Open-Sankore.app/Contents/Resources/library/applications/Flipbook.wgt/js/angular.js",
 		"/Users/adrienbocquet/Desktop/Flipbook/sources/css/_colors.scss",
@@ -1068,10 +1071,7 @@
 		"/Users/adrienbocquet/Sites/MAMP/Kub/app/config/routing_dev.yml",
 		"/Users/adrienbocquet/Sites/MAMP/Kub/app/AppKernel.php",
 		"/Users/adrienbocquet/Sites/MAMP/Kub/app/config/routing.yml",
-		"/Users/adrienbocquet/Sites/MAMP/Kub/composer.json",
-		"/Users/adrienbocquet/Sites/MAMP/Kub/src/Kub/CollaborationBundle/Form/Handler/ProjetHandler.php",
-		"/Users/adrienbocquet/Sites/MAMP/Kub/src/Kub/CollaborationBundle/Form/FichierType.php",
-		"/Users/adrienbocquet/Sites/Sankoré/Calendrier/main.js"
+		"/Users/adrienbocquet/Sites/MAMP/Kub/composer.json"
 	],
 	"find":
 	{
@@ -1082,6 +1082,7 @@
 		"height": 0.0,
 		"where_history":
 		[
+			"<open files>",
 			"/Users/adrienbocquet/Desktop/Flipbook/sources",
 			"/Users/adrienbocquet/Desktop/Flipbook",
 			"/Users/adrienbocquet/Sites/MAMP/KUB/web,*.scss",
@@ -1131,6 +1132,15 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"console_content",
+			"drop",
+			"element",
+			"onDropTarget",
+			"a>",
+			"<a",
+			"a",
+			"switch",
+			"showTodayButton",
 			"id=",
 			"switchEditMode",
 			"default",
@@ -1249,16 +1259,7 @@
 			"view",
 			"this.",
 			"that",
-			"next",
-			"this.$",
-			"previous",
-			"button",
-			"//_",
-			"Mode",
-			"mode",
-			"Mode",
-			"mode",
-			"view"
+			"next"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -1367,6 +1368,10 @@
 	{
 		"height": 100.0
 	},
+	"output.unsaved_changes":
+	{
+		"height": 334.0
+	},
 	"replace":
 	{
 		"height": 64.0
@@ -1377,6 +1382,22 @@
 		"height": 0.0,
 		"selected_items":
 		[
+			[
+				"inde",
+				"index.html"
+			],
+			[
+				"app",
+				"js/app.js"
+			],
+			[
+				"a",
+				"js/app.js"
+			],
+			[
+				"html",
+				"index.html"
+			],
 			[
 				"ap",
 				"js/app.js"
@@ -1396,14 +1417,6 @@
 			[
 				"con",
 				"config.xml"
-			],
-			[
-				"inde",
-				"index.html"
-			],
-			[
-				"app",
-				"js/app.js"
 			],
 			[
 				"added",
@@ -1440,10 +1453,6 @@
 			[
 				"help",
 				"js/handlebars-helpers.js"
-			],
-			[
-				"a",
-				"css/added.css"
 			],
 			[
 				"js",
@@ -1884,10 +1893,6 @@
 			[
 				"groupecontroll",
 				"src/Kub/ClasseBundle/Controller/GroupeController.php"
-			],
-			[
-				"orgnat",
-				"src/Kub/CollaborationBundle/Controller/OrganisationController.php"
 			]
 		],
 		"width": 0.0
