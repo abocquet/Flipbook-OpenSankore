@@ -9,6 +9,7 @@ var app = angular.module('Flipbook', ['ui.sortable']);
 
 app.controller('MainController', function($scope){
 
+	if(typeof sankore != 'undefined')
 	sankore.enableDropOnWidget();
 
 	$scope.currentIndex = 0 ;
@@ -77,9 +78,19 @@ app.directive("dropImage", function (){
 		restrict: 'A',
 		link: function ($scope, elem, attributes) {
 
-			elem.bind("drop", function(e) {
-				alert(e);
+			elem.bind('drop', function(e){
+				var data = e.originalEvent.dataTransfer.getData("text/plain");
+
+				var path = $($.parseXML(data)).find('path').text();
+				$scope.images.push(path) ;
+
+				$scope.$apply();
 			});
+
+			elem.bind('dragover', function(){
+				return false ;
+			})
+
 		}
-	}
+	};
 });

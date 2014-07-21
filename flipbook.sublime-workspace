@@ -1132,6 +1132,7 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"div",
 			"console_content",
 			"drop",
 			"element",
@@ -1258,8 +1259,7 @@
 			"edit",
 			"view",
 			"this.",
-			"that",
-			"next"
+			"that"
 		],
 		"highlight": true,
 		"in_selection": false,
